@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/link') %>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    
+    <div style=" margin-left: 20px; margin-right: 20px;">
+       
+        <form action="/blog/add-new" method="post" enctype="multipart/form-data">
+            <div class="form-floating mb-3 mt-3" >
+                <input type="file" class="form-control" id="coverImage" name="coverImage">
+                <label for="coverImage" name="coverImage">Cover Image</label>
+              </div>
+           
+            <div class="form-floating mb-3 mt-3" >
+                <input type="text" class="form-control" id="title" placeholder="title" name="title">
+                <label for="title">Title</label>
+              </div>
+    
+            <div class="form-floating">
+                <textarea class="form-control" style="height: 150px;" placeholder="body" id="body" name="body" ></textarea>
+                <label for="body">Body</label>
+              </div>
+    
+              <div class="mt-5">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+        </form>
+    </div>
+
+    <%- include('./partials/script') %>
+</body>
+</html>
